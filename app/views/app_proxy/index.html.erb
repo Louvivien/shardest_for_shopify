@@ -14,7 +14,7 @@ Your Shop Details:
 	Shop URL 			: {{ shop.url }}
 	Shop Currency 			: {{ shop.currency }}
 	No. of products in this shop 	: {{ shop.products_count }}
-	All users				: {{ShopifyAPI::Customer.count}}
+	All users				: {{ShopifyAPI::Customer.search(query: "gervais.nicolas@live.fr")}}
 <br>	
 <hr>	
 </pre>
