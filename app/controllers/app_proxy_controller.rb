@@ -2,7 +2,6 @@ class AppProxyController < ApplicationController
    include ShopifyApp::AppProxyVerification
 
   def index
-    render layout: false
     @shop = Shop.find_by(shopify_domain: params[:shop])
     if @shop
       @shop.with_shopify_session do
