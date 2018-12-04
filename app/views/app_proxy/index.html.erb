@@ -14,7 +14,7 @@ Your Shop Details:
 	Shop URL 			: {{ shop.url }}
 	Shop Currency 			: {{ shop.currency }}
 	No. of products in this shop 	: {{ shop.products_count }}
-	<% for product in @products do |product| %>
+	<% for product in @products do  %>
 		<%= product.title%>
 	<% end %>
 <br>	
