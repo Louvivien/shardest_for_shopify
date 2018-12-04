@@ -16,7 +16,9 @@ Your Shop Details:
 	Shop URL 			: {{ shop.url }}
 	Shop Currency 			: {{ shop.currency }}
 	No. of products in this shop 	: {{ shop.products_count }}
-	No. of customers in this shop 	: {{ shop.customers.count }}
+	No. of customers in this shop 	:  {% for product in shop.customers %}
+											{{ customer }}
+										{% endfor %}
 <br>	
 <hr>	
 </pre>
