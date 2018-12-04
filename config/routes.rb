@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root :to => 'home#index'
   mount ShopifyApp::Engine, at: '/'
+  get 'auth/oauth2/callback' => 'auth0#callback'
+  get 'auth/failure' => 'auth0#failure'
 
   namespace :app_proxy do
     root action: 'index'
