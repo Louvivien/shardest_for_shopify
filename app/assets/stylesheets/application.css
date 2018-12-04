@@ -12,4 +12,7 @@
  *
  *= require_tree .
  *= require_self
+ * METRONIC THEME STYLES
+ *= require vendors/base/vendors.bundle
+ *= require demo/demo2/base/style.bundle
  */
