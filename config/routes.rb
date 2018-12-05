@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get 'auth/failure' => 'auth0#failure'
 
   namespace :app_proxy do
-    root action: 'index'
+    root :to => 'accounts#home'
     # simple routes without a specified controller will go to AppProxyController
     
     # more complex routes will go to controllers in the AppProxy namespace
