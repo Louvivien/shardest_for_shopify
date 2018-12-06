@@ -16,4 +16,5 @@
  *= require vendors/base/vendors.bundle
  *= require demo/default/base/style.bundle
  *= require vendors/custom/fullcalendar/fullcalendar.bundle
+ *= require font-awesome
  */
