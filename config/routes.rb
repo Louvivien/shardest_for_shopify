@@ -2,11 +2,11 @@ Rails.application.routes.draw do
   #get 'accounts/home'
   #root :to => 'home#index'
   mount ShopifyApp::Engine, at: '/'
-  #get 'auth/oauth2/callback' => 'auth0#callback'
-  #get 'auth/failure' => 'auth0#failure'
+  get 'auth/oauth2/callback' => 'auth0#callback'
+  get 'auth/failure' => 'auth0#failure'
   #root :to => 'app_proxy#index'
-  get '/accounts' => 'accounts#home'
-  get '/' => 'app_proxy#index'
+  get '/' => 'accounts#home'
+ 
       
     # GET /app_proxy/reviews will now be routed to
     # AppProxy::ReviewsController#index, for example
