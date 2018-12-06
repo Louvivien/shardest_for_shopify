@@ -15,4 +15,5 @@
  * METRONIC THEME STYLES
  *= require vendors/base/vendors.bundle
  *= require demo/demo2/base/style.bundle
+ *= require vendors/custom/fullcalendar/fullcalendar.bundle
  */
