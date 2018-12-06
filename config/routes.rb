@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   #get 'auth/failure' => 'auth0#failure'
 
   namespace :app_proxy do
-    root action: 'index'
+    root :to => 'app_proxy#index'
 
     resources :accounts
       get '/accounts' => 'accounts#home'
