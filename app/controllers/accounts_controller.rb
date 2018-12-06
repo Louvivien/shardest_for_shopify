@@ -1,5 +1,5 @@
 class AccountsController < ApplicationController
-  #include ShopifyApp::AppProxyVerification
+  include ShopifyApp::AppProxyVerification
   #include Secured
 
   def home
