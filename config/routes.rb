@@ -1,16 +1,16 @@
 Rails.application.routes.draw do
-  get 'accounts/home'
-  root :to => 'home#index'
+  #get 'accounts/home'
+  #root :to => 'home#index'
   mount ShopifyApp::Engine, at: '/'
-  get 'auth/oauth2/callback' => 'auth0#callback'
-  get 'auth/failure' => 'auth0#failure'
+  #get 'auth/oauth2/callback' => 'auth0#callback'
+  #get 'auth/failure' => 'auth0#failure'
 
   namespace :app_proxy do
-    root :to => 'accounts#home'
-    # simple routes without a specified controller will go to AppProxyController
-    
-    # more complex routes will go to controllers in the AppProxy namespace
-    # 	resources :reviews
+    root action: 'index'
+
+    resources :accounts
+      get '/accounts' => 'accounts#home'
+      
     # GET /app_proxy/reviews will now be routed to
     # AppProxy::ReviewsController#index, for example
   end

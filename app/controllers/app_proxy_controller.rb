@@ -6,7 +6,6 @@ class AppProxyController < ApplicationController
     if @shop
       @shop.with_shopify_session do
       @products = ShopifyAPI::Product.find(:all)
-        # la-dee-da I got a product...
       end
     end
   end
