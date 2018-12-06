@@ -16,4 +16,6 @@
 //= require_tree .
 // METRONIC THEME JAVASCRIPTS
 //= require vendors/base/vendors.bundle
-//= require demo/demo2/base/scripts.bundle
+//= require demo/default/base/scripts.bundle
+//= require vendors/custom/fullcalendar/fullcalendar.bundle
+//= require app/js/dashboard
