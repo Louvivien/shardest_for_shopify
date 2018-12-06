@@ -41,7 +41,7 @@ gem 'omniauth-auth0'
 gem 'webpacker'
 gem 'foreman'
 # CORS
-gem 'rack-cors'
+gem 'rack-cors', require: 'rack/cors'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
