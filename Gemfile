@@ -40,6 +40,10 @@ gem 'omniauth-auth0'
 # JavaScript
 gem 'webpacker'
 gem 'foreman'
+# CORS
+gem 'rack-cors', require: 'rack/cors'
+# Fonts
+gem "font-awesome-rails"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

@@ -1,5 +1,6 @@
 class LogoutController < ApplicationController
-	include LogoutHelper
+  include LogoutHelper
+  include ShopifyApp::AppProxyVerification
 
   def logout
     reset_session

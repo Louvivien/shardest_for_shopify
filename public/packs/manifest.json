@@ -1,0 +1,9 @@
+{
+  "application.css": "/packs/application-992601a9a1bd6b9c191544df16b79868.css",
+  "application.js": "/packs/application-d19a5b7738b32373aefb.js",
+  "application.js.map": "/packs/application-d19a5b7738b32373aefb.js.map",
+  "hello_angular.js": "/packs/hello_angular-58a5870719e7dc3f00ee.js",
+  "hello_angular.js.map": "/packs/hello_angular-58a5870719e7dc3f00ee.js.map",
+  "hello_typescript.js": "/packs/hello_typescript-6f848761538b9c7a2228.js",
+  "hello_typescript.js.map": "/packs/hello_typescript-6f848761538b9c7a2228.js.map"
+}
