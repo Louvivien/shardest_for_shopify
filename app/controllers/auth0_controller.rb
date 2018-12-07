@@ -1,12 +1,12 @@
 class Auth0Controller < ApplicationController
-  #include ShopifyApp::AppProxyVerification
+  include ShopifyApp::AppProxyVerification
 	def callback
     # This stores all the user information that came from Auth0
     # and the IdP
     session[:userinfo] = request.env['omniauth.auth']
 
     # Redirect to the URL you want after successful auth
-    redirect_to 'https://shardest.com/a/account'
+    redirect_to controller: 'accounts', action: 'home', session[:userinfo] : session[:userinfo]
   end
 
   def failure
