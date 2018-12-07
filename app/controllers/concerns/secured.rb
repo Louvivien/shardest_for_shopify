@@ -6,6 +6,6 @@ module Secured
   end
 
   def logged_in_using_omniauth?
-    redirect_to '/auth/auth0' unless session[:userinfo].present?
+    redirect_to 'https://shardest.com/a/account/auth/auth0' unless session[:userinfo].present?
   end
 end

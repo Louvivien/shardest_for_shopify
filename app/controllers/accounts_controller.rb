@@ -1,6 +1,6 @@
 class AccountsController < ApplicationController
   #include ShopifyApp::AppProxyVerification
-  include Secured
+  #include Secured
 
   def home
   	@user = session[:userinfo]
