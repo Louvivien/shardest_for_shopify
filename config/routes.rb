@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
   #get 'accounts/home'
-  root :to => 'home#index'
+
   mount ShopifyApp::Engine, at: '/'
   get '/auth/oauth2/callback', to: 'auth0#callback'
   get '/auth/failure' => 'auth0#failure'
   #root :to => 'app_proxy#index'
-  get '/' => 'accounts#home'
+  root :to => 'accounts#home'
   
  
       
