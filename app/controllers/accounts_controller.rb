@@ -3,6 +3,7 @@ class AccountsController < ApplicationController
   include Secured
 
   def home
+    puts session[:userinfo]
   	@user = session[:userinfo]
   end
 
