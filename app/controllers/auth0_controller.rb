@@ -3,10 +3,10 @@ class Auth0Controller < ApplicationController
 	def callback
     # This stores all the user information that came from Auth0
     # and the IdP
-    session[:userinfo] = request.env['omniauth.auth']
+    puts session[:userinfo] = request.env['omniauth.auth']
 
     # Redirect to the URL you want after successful auth
-    redirect_to 'https://shardest.com/a/account',  shop: 'shop', path_prefix: 'path_prefix', timestamp: 'timestamp',  signature: 'signature', session[:userinfo]: 'session[:userinfo]'
+    redirect_to 'https://shardest.com/a/account',  shop: 'shop', path_prefix: 'path_prefix', timestamp: 'timestamp',  signature: 'signature'
   end
 
   def failure
