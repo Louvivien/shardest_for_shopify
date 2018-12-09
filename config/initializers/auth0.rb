@@ -1,5 +1,4 @@
 Rails.application.config.middleware.use OmniAuth::Builder do
-  include ShopifyApp::AppProxyVerification
   provider(
     :auth0,
     Rails.application.credentials.auth0_client_id,
