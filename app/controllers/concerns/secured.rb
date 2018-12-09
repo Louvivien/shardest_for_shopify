@@ -1,6 +1,6 @@
 module Secured
   extend ActiveSupport::Concern
-
+  include ShopifyApp::AppProxyVerification
   included do
     before_action :logged_in_using_omniauth?
   end
