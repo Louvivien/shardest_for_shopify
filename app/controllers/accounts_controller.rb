@@ -6,7 +6,10 @@ class AccountsController < ApplicationController
   	@user = session[:userinfo]
   end
 
-  def edit_profile
+  def update
+  end
+
+  def show
   end
 
 end
