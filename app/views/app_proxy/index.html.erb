@@ -9,7 +9,7 @@ window.addEventListener('load', function() {
     clientID: 'ap1RB7pH8lSi-hdvq3W_tD-7IwIK7yov',
     responseType: 'token id_token',
     scope: 'openid',
-    redirectUri: 'shardest.com/a/account/home'
+    redirectUri: window.location.href
   });
 
   var loginBtn = document.getElementById('btn-login');
@@ -19,9 +19,7 @@ window.addEventListener('load', function() {
     webAuth.authorize();
   });
 
-});
-
-var loginStatus = document.querySelector('.container h4');
+  var loginStatus = document.querySelector('.container h4');
   var loginView = document.getElementById('login-view');
   var homeView = document.getElementById('home-view');
 
@@ -92,6 +90,8 @@ var loginStatus = document.querySelector('.container h4');
         'You are not logged in! Please log in to continue.';
     }
   }
+
+});
 
   window.addEventListener('load', function() {
 
