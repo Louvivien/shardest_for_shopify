@@ -43,9 +43,9 @@ class Auth0Controller < ApplicationController
 
     # This stores all the user information that came from Auth0
     # and the IdP
-    # session[:userinfo] = request.env['omniauth.auth']
+    session[:userinfo] = decoded_token
     # # Redirect to the URL you want after successful auth
-    # redirect_to '/a/account/dashboard',  shop: 'shop', path_prefix: 'path_prefix', timestamp: 'timestamp',  signature: 'signature'
+    redirect_to '/a/account/dashboard',  shop: 'shop', path_prefix: 'path_prefix', timestamp: 'timestamp',  signature: 'signature'
   end
 
   def failure
