@@ -25,7 +25,13 @@ class Auth0Controller < ApplicationController
       rsa_public = rsa_private.public_key
       
       response = response.body
-      token = response[:id_token]
+
+      if response.class == Hash
+
+        token = response[:id_token]
+
+      end
+
       
       decoded_token = JWT.decode token, rsa_public, false, { algorithm: 'RS256' }
       
