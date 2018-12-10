@@ -21,7 +21,7 @@ class Auth0Controller < ApplicationController
 
       
 
-      payload = reponse
+      payload = response.read_body
 
       # IMPORTANT: set nil as password parameter
       token = JWT.encode payload, nil, 'none'
