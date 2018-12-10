@@ -4,7 +4,8 @@ class Auth0Controller < ApplicationController
     
     require 'uri'
     require 'net/http'
-
+    require 'jwt'
+    
       url = URI("https://shardest.eu.auth0.com/oauth/token")
 
       http = Net::HTTP.new(url.host, url.port)
@@ -18,9 +19,9 @@ class Auth0Controller < ApplicationController
       response = http.request(request)
       puts response.read_body
 
-      require 'jwt'
+      
 
-      payload = { data: response }
+      payload = { data: response[:id_token] }
 
       # IMPORTANT: set nil as password parameter
       token = JWT.encode payload, nil, 'none'
