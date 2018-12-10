@@ -24,9 +24,11 @@ class Auth0Controller < ApplicationController
       rsa_private = OpenSSL::PKey::RSA.generate 2048
       rsa_public = rsa_private.public_key
       
-      response = response.body.split(',')
+      response = response.body
 
-      token = response[1]
+      response = JSON.parse(response).with_indifferent_access
+      puts response
+      token = response[:id_token]
       puts token
 
 
