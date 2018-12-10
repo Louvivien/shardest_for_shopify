@@ -26,14 +26,9 @@ class Auth0Controller < ApplicationController
       
       response = response.body
 
-      if response.class == Hash
+      token = response[:id_token]
 
-        token = response[:id_token]
-
-      end
-
-      
-      decoded_token = JWT.decode token, rsa_public, false, { algorithm: 'RS256' }
+      decoded_token = JWT.decode response.body[:id_token], rsa_public, false, { algorithm: 'RS256' }
       
       # Array
       # [
