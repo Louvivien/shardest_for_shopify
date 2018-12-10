@@ -9,7 +9,7 @@ window.addEventListener('load', function() {
     clientID: 'ap1RB7pH8lSi-hdvq3W_tD-7IwIK7yov',
     responseType: 'token id_token',
     scope: 'openid',
-    redirectUri: window.location.href
+    redirectUri: 'shardest.com/a/account/home'
   });
 
   var loginBtn = document.getElementById('btn-login');
@@ -93,7 +93,11 @@ var loginStatus = document.querySelector('.container h4');
     }
   }
 
+  window.addEventListener('load', function() {
 
+	// ...
+	handleAuthentication();
+  });
 
 </script>
 

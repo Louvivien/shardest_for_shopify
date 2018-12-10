@@ -5,8 +5,9 @@ Rails.application.routes.draw do
   get '/auth/oauth2/callback' => 'auth0#callback'
   get '/auth/failure' => 'auth0#failure'
   #root :to => 'app_proxy#index'
-  get 'home' => 'accounts#home'
+  get '/home' => 'accounts#home'
   get '/' => 'app_proxy#index'
+  
   
  
       
