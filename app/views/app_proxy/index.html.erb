@@ -12,8 +12,8 @@ var lock = new Auth0Lock(
 );
 
 lock.show({
-	callbackURL: 'https://shardest.com/a/account/dashboard',
-	responseType: 'token'
+	redirectUrl: 'https://shardest.com/a/account/auth/oauth2/callback',
+	responseType: 'code'
 });
 
 </script>
