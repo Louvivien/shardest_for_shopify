@@ -1,10 +1,9 @@
 class AccountsController < ApplicationController
   include ShopifyApp::AppProxyVerification
-  include Secured
+  before_action :authenticate_user!
 
   def home
-    puts session[:userinfo]
-  	@user = session[:userinfo]
+    @user = current_user
   end
 
 end
