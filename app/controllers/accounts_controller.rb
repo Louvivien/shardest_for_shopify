@@ -3,7 +3,7 @@ class AccountsController < ApplicationController
 
 
   def home
-    
+    @user = session[:userinfo]
   end
 
 end
