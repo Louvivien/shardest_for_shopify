@@ -21,7 +21,7 @@ class Auth0Controller < ApplicationController
 
       
 
-      payload = response.read_body
+      payload = response[:id_token].read_body
 
       # IMPORTANT: set nil as password parameter
       token = JWT.encode payload, nil, 'none'
