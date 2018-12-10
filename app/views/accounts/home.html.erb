@@ -4,18 +4,11 @@
 
 
 // Initializing our Auth0Lock
-var options = {
-  auth: {
-   responseType: 'code'
-   redirect: true,
-   redirectUrl: "https://shardest.com/a/account/auth/oauth2/callback",
-  }
-};
+
 
 var lock = new Auth0Lock(
   'ap1RB7pH8lSi-hdvq3W_tD-7IwIK7yov',
   'shardest.eu.auth0.com',
-  options
 );
 // Listening for the authenticated event
 lock.on("authenticated", function(authResult) {
