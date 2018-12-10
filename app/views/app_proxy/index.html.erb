@@ -11,7 +11,10 @@ var lock = new Auth0Lock(
   'shardest.eu.auth0.com',
 );
 
-lock.show();
+lock.show({
+	callbackURL: 'https://shardest.com/a/account/dashboard',
+	responseType: 'token'
+});
 
 </script>
 
