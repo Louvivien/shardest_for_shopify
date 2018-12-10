@@ -21,7 +21,7 @@ class Auth0Controller < ApplicationController
 
       
 
-      payload = { data: '#{response}' }
+      payload = reponse
 
       # IMPORTANT: set nil as password parameter
       token = JWT.encode payload, nil, 'none'
@@ -30,7 +30,7 @@ class Auth0Controller < ApplicationController
       puts token
 
       # Set password to nil and validation to false otherwise this won't work
-      decoded_token = JWT.decode token, nil, false
+      decoded_token = JWT.decode payload, nil, false
 
       # Array
       # [
