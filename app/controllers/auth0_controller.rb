@@ -18,6 +18,25 @@ class Auth0Controller < ApplicationController
       response = http.request(request)
       puts response.read_body
 
+      require 'jwt'
+
+      payload = { data: response }
+
+      # IMPORTANT: set nil as password parameter
+      token = JWT.encode payload, nil, 'none'
+
+      # eyJhbGciOiJub25lIn0.eyJkYXRhIjoidGVzdCJ9.
+      puts token
+
+      # Set password to nil and validation to false otherwise this won't work
+      decoded_token = JWT.decode token, nil, false
+
+      # Array
+      # [
+      #   {"data"=>"test"}, # payload
+      #   {"alg"=>"none"} # header
+      # ]
+      puts decoded_token
 
     # This stores all the user information that came from Auth0
     # and the IdP
