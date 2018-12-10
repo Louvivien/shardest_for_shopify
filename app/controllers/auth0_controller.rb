@@ -24,7 +24,6 @@ class Auth0Controller < ApplicationController
       rsa_private = OpenSSL::PKey::RSA.generate 2048
       rsa_public = rsa_private.public_key
       
-      response = response.headers['id_token'].split(' ').last
       token = JSON.parse response
       
       decoded_token = JWT.decode token, rsa_public, true, { algorithm: 'RS256' }
