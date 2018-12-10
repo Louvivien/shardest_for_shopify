@@ -3,9 +3,9 @@ class AccountsController < ApplicationController
 
 
   def home
-    puts session[:userinfo]
-    puts session[:userinfo][:picture]
-    @user = session[:userinfo]
+    puts params[:user]
+    puts session[:user][:picture]
+    @user = params[:user]
   end
 
 end
