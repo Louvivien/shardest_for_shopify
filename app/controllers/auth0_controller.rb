@@ -5,7 +5,7 @@ class Auth0Controller < ApplicationController
     # and the IdP
     session[:userinfo] = request.env['omniauth.auth']
     # Redirect to the URL you want after successful auth
-    redirect_to 'https://shardest.com/a/account/dashboard',  shop: 'shop', path_prefix: 'path_prefix', timestamp: 'timestamp',  signature: 'signature'
+    redirect_to '/dashboard',  shop: 'shop', path_prefix: 'path_prefix', timestamp: 'timestamp',  signature: 'signature'
   end
 
   def failure
