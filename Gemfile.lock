@@ -259,6 +259,7 @@ DEPENDENCIES
   foreman
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
+  omniauth
   omniauth-auth0
   pg
   puma (~> 3.11)

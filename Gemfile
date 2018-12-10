@@ -37,6 +37,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 # Authentification
 gem 'omniauth-auth0'
+gem 'omniauth'
 # JavaScript
 gem 'webpacker'
 gem 'foreman'
