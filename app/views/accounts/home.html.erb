@@ -1,37 +1,3 @@
-<script src="https://cdn.auth0.com/js/lock/11.12.1/lock.min.js"></script>
-
-<script>
-
-
-// Initializing our Auth0Lock
-
-
-var lock = new Auth0Lock(
-  'ap1RB7pH8lSi-hdvq3W_tD-7IwIK7yov',
-  'shardest.eu.auth0.com',
-);
-// Listening for the authenticated event
-lock.on("authenticated", function(authResult) {
-  // Use the token in authResult to getUserInfo() and save it to localStorage
-  lock.getUserInfo(authResult.accessToken, function(error, profile) {
-    if (error) {
-      // Handle error
-      return;
-    }
-
-    document.getElementById('nick').textContent = profile.nickname;
-
-    localStorage.setItem('accessToken', authResult.accessToken);
-    localStorage.setItem('profile', JSON.stringify(profile));
-  });
-});
-
-lock.show();
-
-</script>
-
-
-
 <!-- begin::Body -->
 <body class="m-page--fluid m--skin- m-content--skin-light2 m-header--fixed m-header--fixed-mobile m-aside-left--enabled m-aside-left--skin-dark m-aside-left--fixed m-aside-left--offcanvas m-footer--push m-aside--offcanvas-default">
 

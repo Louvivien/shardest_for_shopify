@@ -13,7 +13,7 @@ module Auth0Helper
       if user_signed_in?
         @current_user = session[:userinfo]
       else
-        redirect_to '/a/account'
+        redirect_to login_path
       end
     end
   

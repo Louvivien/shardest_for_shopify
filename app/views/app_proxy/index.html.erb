@@ -4,35 +4,15 @@
 
 
 // Initializing our Auth0Lock
-var options = {
-  auth: {
-   redirect: true,
-   redirectUrl: "https://shardest.com/a/account/auth/oauth2/callback",
-  }
-};
+
 
 var lock = new Auth0Lock(
   'ap1RB7pH8lSi-hdvq3W_tD-7IwIK7yov',
   'shardest.eu.auth0.com',
-  options
 );
-// Listening for the authenticated event
-lock.on("authenticated", function(authResult) {
-  // Use the token in authResult to getUserInfo() and save it to localStorage
-  lock.getUserInfo(authResult.accessToken, function(error, profile) {
-    if (error) {
-      // Handle error
-      return;
-    }
-
-    document.getElementById('nick').textContent = profile.nickname;
-
-    localStorage.setItem('accessToken', authResult.accessToken);
-    localStorage.setItem('profile', JSON.stringify(profile));
-  });
-});
 
 lock.show();
 
 </script>
+
 
