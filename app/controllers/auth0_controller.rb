@@ -14,4 +14,6 @@ class Auth0Controller < ApplicationController
     @error_msg = request.params['message']
   end
 
+
+
 end
