@@ -51,6 +51,7 @@ class Auth0Controller < ApplicationController
     puts @user = decoded_token[0]
     puts @user[0]
     puts @user[:picture]
+    puts @user["picture"]
     # Redirect to the URL you want after successful auth
     #redirect_to dashboard_path(param1: @user}, shop: 'shop', path_prefix: "path_prefix", timestamp: "timestamp", signature: "signature")
 
