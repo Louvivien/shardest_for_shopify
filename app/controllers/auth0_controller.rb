@@ -44,9 +44,10 @@ class Auth0Controller < ApplicationController
     # This stores all the user information that came from Auth0
     # and the IdP
     puts user_info = decoded_token[0]
+    cookies[:user_info] = user_info
     
     # # Redirect to the URL you want after successful auth
-    redirect_to '/a/account/dashboard',  shop: 'shop', path_prefix: 'path_prefix', timestamp: 'timestamp',  signature: 'signature', user: '#{user_info}'
+    redirect_to '/a/account/dashboard',  shop: 'shop', path_prefix: 'path_prefix', timestamp: 'timestamp',  signature: 'signature'
   end
 
   def failure
