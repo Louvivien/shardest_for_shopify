@@ -56,7 +56,7 @@ class Auth0Controller < ApplicationController
     # Redirect to the URL you want after successful auth
     #redirect_to dashboard_path(param1: @user}, shop: 'shop', path_prefix: "path_prefix", timestamp: "timestamp", signature: "signature")
 
-    #render :home
+    
   end
 
   def failure
