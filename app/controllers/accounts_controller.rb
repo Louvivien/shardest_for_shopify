@@ -7,9 +7,11 @@ class AccountsController < ApplicationController
   end
 
   def update
+    @user = session[:userinfo]
   end
 
   def show
+    @user = session[:userinfo]
   end
 
   def demo4

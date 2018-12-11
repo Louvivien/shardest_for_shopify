@@ -5,7 +5,8 @@
 	<div class="m-grid m-grid--hor m-grid--root m-page">
 
 		<!--begin::Header-->
-		
+
+		<%= render 'header' %>
 
 		<!--end::Header-->
 
@@ -39,12 +40,12 @@
 					            	<div class="m-card-profile">
 										<div class="m-card-profile__pic">
 											<div class="m-card-profile__pic-wrapper">
-												<img src="assets/app/media/img/users/user4.jpg" alt="">
+												<%= image_tag @user["extra"]["raw_info"]["picture"] %>
 											</div>
 										</div>
 										<div class="m-card-profile__details">
 											<div class="m-card-profile__name" style="margin-bottom: 5vh">
-												Mark Andre
+												<%= @user["extra"]["raw_info"]["name"] %>
 											</div>
 											<div class="m-stack m-stack--ver m-stack--general">
 												<div class="m-stack__item m-stack__item--right">
