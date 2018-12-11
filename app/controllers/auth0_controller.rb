@@ -43,7 +43,7 @@ class Auth0Controller < ApplicationController
 
     # This stores all the user information that came from Auth0
     # and the IdP
-    puts session[:userinfo] = decoded_token
+    puts session[:userinfo] = decoded_token[1]
     puts session[:userinfo]
     @user = session[:userinfo]
     # Redirect to the URL you want after successful auth
