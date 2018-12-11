@@ -48,7 +48,7 @@ class Auth0Controller < ApplicationController
     @user = session[:userinfo]
     puts session[:userinfo].class
     # Redirect to the URL you want after successful auth
-    #redirect_to '/a/account/dashboard',  shop: 'shop', path_prefix: 'path_prefix', timestamp: 'timestamp',  signature: 'signature'
+    redirect_to dashboard_path(param1 = '#{@user}')
 
     #render :home
   end
