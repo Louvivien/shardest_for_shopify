@@ -3,8 +3,7 @@ class AccountsController < ApplicationController
 
 
   def home
-    puts cookies[:user_info]
-    @user = cookies[:user_info]
+    @user = session[:userinfo]
   end
 
 end

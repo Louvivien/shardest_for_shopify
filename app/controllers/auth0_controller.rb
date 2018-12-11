@@ -32,7 +32,7 @@ class Auth0Controller < ApplicationController
       puts token
 
 
-      decoded_token = JWT.decode token, rsa_public, false, { algorithm: 'RS256' }
+      decoded_token = JWT.decode token, rsa_public, true, { algorithm: 'RS256' }
       
       # Array
       # [
@@ -43,9 +43,8 @@ class Auth0Controller < ApplicationController
 
     # This stores all the user information that came from Auth0
     # and the IdP
-    puts user_info = decoded_token[0]
-    cookies[:user_info] = user_info
-    
+    puts session[:userinfo] = decoded_token
+    puts session[:userinfo]
     # # Redirect to the URL you want after successful auth
     redirect_to '/a/account/dashboard',  shop: 'shop', path_prefix: 'path_prefix', timestamp: 'timestamp',  signature: 'signature'
   end
