@@ -45,9 +45,8 @@ class Auth0Controller < ApplicationController
     # and the IdP
     puts session[:userinfo] = decoded_token[0]
     puts session[:userinfo]
-    puts @user = session[:userinfo][:picture]
     @user = session[:userinfo]
-    @user[:picture]
+    puts @user[:picture]
     # Redirect to the URL you want after successful auth
     #redirect_to '/a/account/dashboard',  shop: 'shop', path_prefix: 'path_prefix', timestamp: 'timestamp',  signature: 'signature'
 
