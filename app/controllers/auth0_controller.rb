@@ -32,7 +32,7 @@ class Auth0Controller < ApplicationController
       puts token
 
 
-      decoded_token = JWT.decode token, rsa_public, true, { algorithm: 'RS256' }
+      decoded_token = JWT.decode token, rsa_public, fasle, { algorithm: 'RS256' }
       
       # Array
       # [
