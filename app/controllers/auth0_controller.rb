@@ -45,12 +45,13 @@ class Auth0Controller < ApplicationController
     # and the IdP
     puts session[:userinfo] = decoded_token[0]
     puts session[:userinfo]
+    puts session[:userinfo][:picture]
     @user = session[:userinfo]
     puts session[:userinfo].class
     # Redirect to the URL you want after successful auth
-    redirect_to dashboard_path(param1: '#{@user}', shop: 'shop', path_prefix: "path_prefix", timestamp: "timestamp", signature: "signature")
+    #redirect_to dashboard_path(param1: @user}, shop: 'shop', path_prefix: "path_prefix", timestamp: "timestamp", signature: "signature")
 
-    #render :home
+    render :home
   end
 
   def failure
