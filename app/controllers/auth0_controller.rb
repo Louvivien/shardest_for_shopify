@@ -48,6 +48,8 @@ class Auth0Controller < ApplicationController
     @user = session[:userinfo]
     # Redirect to the URL you want after successful auth
     #redirect_to '/a/account/dashboard',  shop: 'shop', path_prefix: 'path_prefix', timestamp: 'timestamp',  signature: 'signature'
+
+    render :home
   end
 
   def failure
@@ -55,6 +57,8 @@ class Auth0Controller < ApplicationController
     @error_msg = request.params['message']
   end
 
+  def home
+  end
 
 
 end
