@@ -46,7 +46,7 @@ class Auth0Controller < ApplicationController
     puts user_info = decoded_token[0]
     
     # # Redirect to the URL you want after successful auth
-    redirect_to '/a/account/dashboard',  shop: 'shop', path_prefix: 'path_prefix', timestamp: 'timestamp',  signature: 'signature', user: user_info
+    redirect_to '/a/account/dashboard',  shop: 'shop', path_prefix: 'path_prefix', timestamp: 'timestamp',  signature: 'signature', user: '#{user_info}'
   end
 
   def failure
