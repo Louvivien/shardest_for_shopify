@@ -3,8 +3,8 @@ class AccountsController < ApplicationController
 
 
   def home
-    puts user
-    @user = user
+    puts params[:user]
+    @user = params[:user]
   end
 
 end
