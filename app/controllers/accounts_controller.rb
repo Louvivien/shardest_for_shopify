@@ -12,4 +12,7 @@ class AccountsController < ApplicationController
   def show
   end
 
+  def demo4
+  end
+
 end
