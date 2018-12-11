@@ -6,4 +6,15 @@ class AccountsController < ApplicationController
     @user = session[:userinfo]
   end
 
+  def update
+    @user = session[:userinfo]
+  end
+
+  def show
+    @user = session[:userinfo]
+  end
+
+  def demo4
+  end
+
 end

@@ -6,8 +6,9 @@ Rails.application.routes.draw do
   get '/auth/failure' => 'auth0#failure'
   #root :to => 'app_proxy#index'
   get '/dashboard' => 'accounts#home'
-  root :to =>'app_proxy#index'
-  
+  get '/update' => 'accounts#update'
+  get '/profile' => 'accounts#show'
+  get '/demo' => 'accounts#demo4'
  
       
     # GET /app_proxy/reviews will now be routed to

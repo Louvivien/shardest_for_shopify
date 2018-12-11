@@ -2,45 +2,125 @@
 	<div class="modal-dialog modal-lg modal-dialog-centered" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h5 class="modal-title" id="exampleModalLabel">Product Tag</h5>
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
+				<div class="m-stack m-stack--ver m-stack--general">
+					<div class="m-stack__item m-stack__item--left">
+						<div class="m-stack m-stack--ver m-stack--general m-stack--inline">
+							<div class="m-stack__item">
+								<a href="#" class="btn m-btn m-btn--icon" data-dismiss="modal">
+									<i class="la la-times"></i>
+								</a>
+							</div>
+							<div class="m-stack__item" style="width: 10%;">
+								<!--Space-->
+							</div>
+							<div class="m-stack__item m-stack__item--left m-stack__item--middle">
+								<h5 class="modal-title">
+									Tag Manager
+								</h5>
+							</div>
+						</div>
+					</div>
+					<div class="m-stack__item m-stack__item--right">
+						<div class="m-dropdown m-dropdown--inline m-dropdown--arrow m-dropdown--align-right m-dropdown--align-push" m-dropdown-toggle="click" aria-expanded="true">
+							<a href="#" class="m-portlet__nav-link m-dropdown__toggle btn m-btn m-btn--icon">
+								<i class="la la-ellipsis-h"></i>
+							</a>
+							<div class="m-dropdown__wrapper" style="z-index: 101;">
+								<span class="m-dropdown__arrow m-dropdown__arrow--right m-dropdown__arrow--adjust" style="left: auto; right: 29.5px;"></span>
+								<div class="m-dropdown__inner">
+									<div class="m-dropdown__body">
+										<div class="m-dropdown__content">
+											<ul class="m-nav">
+												<li class="m-nav__item">
+													<a href="" class="m-nav__link">
+														<i class="m-nav__link-icon flaticon-share"></i>
+														<span class="m-nav__link-text">Activity</span>
+													</a>
+												</li>
+												<li class="m-nav__item">
+													<a href="" class="m-nav__link">
+														<i class="m-nav__link-icon flaticon-chat-1"></i>
+														<span class="m-nav__link-text">Messages</span>
+													</a>
+												</li>
+												<li class="m-nav__item">
+													<a href="" class="m-nav__link">
+														<i class="m-nav__link-icon flaticon-info"></i>
+														<span class="m-nav__link-text">FAQ</span>
+													</a>
+												</li>
+												<li class="m-nav__item">
+													<a href="" class="m-nav__link">
+														<i class="m-nav__link-icon flaticon-lifebuoy"></i>
+														<span class="m-nav__link-text">Support</span>
+													</a>
+												</li>
+												<li class="m-nav__separator m-nav__separator--fit">
+												</li>
+												<li class="m-nav__item">
+													<a href="#" class="btn btn-outline-danger m-btn m-btn--pill m-btn--wide btn-sm">Hide</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 			<div class="modal-body">
 				<div class="m-stack m-stack--ver m-stack--general">
 					<div class="m-stack__item m-stack__item--left m-stack__item--middle">
-						<img src="https://scontent-cdt1-1.cdninstagram.com/vp/355ebbe636480564dab65e6ad4bbda99/5C8CEF50/t51.2885-15/sh0.08/e35/p640x640/40880220_234451427249531_6256305796874547755_n.jpg" style="width: 300px" data-toggle="modal" data-target="#m_modal_1_2">
+						<img src="https://scontent-cdt1-1.cdninstagram.com/vp/355ebbe636480564dab65e6ad4bbda99/5C8CEF50/t51.2885-15/sh0.08/e35/p640x640/40880220_234451427249531_6256305796874547755_n.jpg" style="height: 50vh">	
+					</div>
+					<div class="m-stack__item" style="width: 10vw;">
+						<!--Space-->
 					</div>
 					<div class="m-stack__item">
-						<div class="m-scrollable" data-scrollbar-shown="true" data-scrollable="true" data-height="200">
+						<div class="m-scrollable m-scroller ps ps--active-y" data-scrollable="true" style="height: 200px; overflow: hidden;">
 							<div class="m-list-search">
-                                <div class="m-list-search__results">
-                                    <span class="m-list-search__result-category m-list-search__result-category--first">
-                                        Products
-                                    </span>
-                                    <a href="#" class="m-list-search__result-item">
-                                        <span class="m-list-search__result-item-icon"><i class="flaticon-interface-3 m--font-warning"></i></span>
-                                        <span class="m-list-search__result-item-text">Adidas - Stan Smith</span>
-                                    </a>
-                                    <a href="#" class="m-list-search__result-item">
-                                        <span class="m-list-search__result-item-icon"><i class="flaticon-share m--font-success"></i></span>
-                                        <span class="m-list-search__result-item-text">H&M - Basic T-Shirt</span>
-                                    </a>
-                                    <a href="#" class="m-list-search__result-item">
-                                        <span class="m-list-search__result-item-icon"><i class="flaticon-paper-plane m--font-info"></i></span>
-                                        <span class="m-list-search__result-item-text">Zara - Slim Jeans</span>
-                                    </a>
-                                </div>
-                            </div>
-						</div>
+	                            <div class="m-list-search__results">
+	                                <span class="m-list-search__result-category">
+	                                    Products
+	                                </span>
+	                                <a href="#" class="m-list-search__result-item">
+	                                    <span class="m-list-search__result-item-pic"><img class="m--img-rounded" src="assets/app/media/img/users/user1.jpg" title=""></span>
+	                                    <span class="m-list-search__result-item-text">Amanda Anderson</span>
+	                                </a>
+	                                <a href="#" class="m-list-search__result-item">
+	                                    <span class="m-list-search__result-item-pic"><img class="m--img-rounded" src="assets/app/media/img/users/user2.jpg" title=""></span>
+	                                    <span class="m-list-search__result-item-text">Kennedy Lloyd</span>
+	                                </a>
+	                                <a href="#" class="m-list-search__result-item">
+	                                    <span class="m-list-search__result-item-pic"><img class="m--img-rounded" src="assets/app/media/img/users/user3.jpg" title=""></span>
+	                                    <span class="m-list-search__result-item-text">Megan Weldon</span>
+	                                </a>
+	                                <a href="#" class="m-list-search__result-item">
+	                                    <span class="m-list-search__result-item-pic"><img class="m--img-rounded" src="assets/app/media/img/users/user4.jpg" title=""></span>
+	                                    <span class="m-list-search__result-item-text">Marc-André ter Stegen</span>
+	                                </a>
+	                            </div>
+	                        </div>
+	                    </div>
 					</div>
 				</div>
-				
 			</div>
 			<div class="modal-footer">
-				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-				<button type="button" class="btn btn-primary">Save changes</button>
+				<div class="m-stack m-stack--ver m-stack--general">
+					<div class="m-stack__item m-stack__item--left">
+						<div class="m-list-pics m-list-pics--rounded">
+                            <a href="#"><img src="assets/app/media/img/users/user1.jpg" title="" style="width: 6vw; min-width: 40px"></a>
+                            <a href="#"><img src="assets/app/media/img/users/user2.jpg" title="" style="width: 6vw; min-width: 40px"></a>
+                            <a href="#"><img src="assets/app/media/img/users/user3.jpg" title="" style="width: 6vw; min-width: 40px"></a>
+                            <a href="#"><img src="assets/app/media/img/users/user4.jpg" title="" style="width: 6vw; min-width: 40px"></a>
+                            <a href="#"><img src="assets/app/media/img/users/user5.jpg" title="" style="width: 6vw; min-width: 40px"></a>
+                        </div>
+					</div>
+					<div class="m-stack__item m-stack__item--bottom m-stack__item--right" style="width: 20vw">
+						<button type="button" class="btn btn-lg btn-primary">Share</button>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
