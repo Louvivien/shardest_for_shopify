@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :set_post, only: [:show, :edit, :update, :destroy, :tag_product]
 
   # GET /posts
   # GET /posts.json
@@ -54,6 +54,9 @@ class PostsController < ApplicationController
       end
     end
   end
+
+
+
 
   # DELETE /posts/1
   # DELETE /posts/1.json
