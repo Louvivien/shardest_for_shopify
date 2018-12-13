@@ -34,11 +34,11 @@ class PostsController < ApplicationController
 
   def tag_product
     puts params
-    puts @image = params[:images]
-    puts @image = params[:images][0]
-    @post = Post.find(params[:post_id])
+    puts @image = params[:images][:post]
+    puts @image = params[:post][:image]
+    puts @post = Post.find(params[:post_id])
     
-    @post.update(:product1_url => @image.src )
+    @post.update(:product1_url => @image )
     respond_to do |format|
       format.html
       format.js {}
@@ -96,6 +96,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:image_url, :images, :product1_url)
+      params.require(:post).permit(:image_url, :image, :product1_url)
     end
 end
