@@ -40,7 +40,8 @@ class PostsController < ApplicationController
       end
     end
     @post = Post.find(params[:post_id])
-    @post.update(:product1_url => 'assets/app/media/img/users/user1.jpg' )
+    @image = params[:image]
+    @post.update(:product1_url => @image[0].src )
     respond_to do |format|
       format.html
       format.js {}
@@ -98,6 +99,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:image_url)
+      params.require(:post).permit(:image_url, :product1_url)
     end
 end
