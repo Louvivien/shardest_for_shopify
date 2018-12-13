@@ -81,18 +81,18 @@
 						<div class="m-list-search">
 							<div class="m-list-search__results">
 								<div class="m-list-search__results">
-								<span class="m-list-search__result-category">
-									Products
-								</span>
-								<% @products.each do |product| %>
-								<a href="#" class="m-list-search__result-item">
-									<% product.images.each do |image| %>
-									<span class="m-list-search__result-item-pic"><img class="m--img-rounded" src="<%= image.src %>" title=""></span>
+									<span class="m-list-search__result-category">
+										Products
+									</span>
+									<% @products.each do |product| %>
+									<a href="#" class="m-list-search__result-item">
+										<% product.images.each do |image| %>
+										<span class="m-list-search__result-item-pic"><img class="m--img-rounded" src="<%= image.src %>" title=""></span>
+										<% end %>
+										<span class="m-list-search__result-item-text"> <%= product.title %> </span>
+										<%= link_to 'Tag this product', "posts/#{post.id}/tag_product" , :post_id => @post.id, method: :post, remote: true %>
+									</a>
 									<% end %>
-									<span class="m-list-search__result-item-text"> <%= product.title %> </span>
-								</a>
-								<%= link_to 'Tag this product', post_tag_product_path(:post_id => @post.id), method: :post, remote: true %>
-							<% end %>
 								</div>
 							</div>
 						</div>
