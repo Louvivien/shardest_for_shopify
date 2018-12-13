@@ -33,6 +33,7 @@ class PostsController < ApplicationController
   end
 
   def tag_product
+    puts params
     puts @image = params[:images]
     puts @image = params[:images][0]
     @post = Post.find(params[:post_id])
