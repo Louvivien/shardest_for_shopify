@@ -34,8 +34,11 @@ class PostsController < ApplicationController
 
   def tag_product
     puts params
+    puts query_parameters
+    puts request_parameters
+    puts path_parameters
     puts @post = Post.find(params[:post_id])
-    puts @image = params[:post][:image]
+    puts @image = 'assets/app/media/img/users/user1.jpg'
     @post.update(:product1_url => @image )
     respond_to do |format|
       format.html
