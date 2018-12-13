@@ -80,30 +80,20 @@
 					<div class="m-stack__item">
 						<div class="m-list-search">
 							<div class="m-list-search__results">
+								<div class="m-list-search__results">
 								<span class="m-list-search__result-category">
-									Customers
+									Products
 								</span>
+								<% @products.each do |product| %>
 								<a href="#" class="m-list-search__result-item">
-									<span class="m-list-search__result-item-pic"><img class="m--img-rounded" src="assets/app/media/img/users/user1.jpg" title=""></span>
-									<span class="m-list-search__result-item-text">Amanda Anderson</span>
-									<%= link_to 'Tag this product', post_tag_product_path(:post_id => @post.id), method: :post, remote: true %>
-									
+									<% product.images.each do |image| %>
+									<span class="m-list-search__result-item-pic"><img class="m--img-rounded" src="<%= image.src %>" title=""></span>
+									<% end %>
+									<span class="m-list-search__result-item-text"> <%= product.title %> </span>
 								</a>
-								<a href="#" class="m-list-search__result-item">
-									<span class="m-list-search__result-item-pic"><img class="m--img-rounded" src="assets/app/media/img/users/user2.jpg" title=""></span>
-									<span class="m-list-search__result-item-text">Kennedy Lloyd</span>
-									<%= link_to 'Tag this product', edit_post_path(post), remote: true %>
-								</a>
-								<a href="#" class="m-list-search__result-item">
-									<span class="m-list-search__result-item-pic"><img class="m--img-rounded" src="assets/app/media/img/users/user3.jpg" title=""></span>
-									<span class="m-list-search__result-item-text">Megan Weldon</span>
-									<%= link_to 'Tag this product', edit_post_path(post), remote: true %>
-								</a>
-								<a href="#" class="m-list-search__result-item">
-									<span class="m-list-search__result-item-pic"><img class="m--img-rounded" src="assets/app/media/img/users/user4.jpg" title=""></span>
-									<span class="m-list-search__result-item-text">Marc-André ter Stegen</span>
-									<%= link_to 'Tag this product', edit_post_path(post), remote: true %>
-								</a>
+								<%= link_to 'Tag this product', post_tag_product_path(:post_id => @post.id), method: :post, remote: true %>
+							<% end %>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -114,10 +104,10 @@
 					<div class="m-stack__item m-stack__item--left">
 						<div class="m-list-pics m-list-pics--rounded">
                             <a href="#"><img id="post_product_no_1" src="<%= @post.product1_url %>" title="" style="width: 6vw; min-width: 40px"></a>
-                            <a href="#"><img src="assets/app/media/img/users/user2.jpg" title="" style="width: 6vw; min-width: 40px"></a>
-                            <a href="#"><img src="assets/app/media/img/users/user3.jpg" title="" style="width: 6vw; min-width: 40px"></a>
-                            <a href="#"><img src="assets/app/media/img/users/user4.jpg" title="" style="width: 6vw; min-width: 40px"></a>
-                            <a href="#"><img src="assets/app/media/img/users/user5.jpg" title="" style="width: 6vw; min-width: 40px"></a>
+                            <a href="#"><img id="post_product_no_2" src="<%= @post.product2_url %>" title="" style="width: 6vw; min-width: 40px"></a>
+                            <a href="#"><img id="post_product_no_3" src="<%= @post.product3_url %>" title="" style="width: 6vw; min-width: 40px"></a>
+                            <a href="#"><img id="post_product_no_4" src="<%= @post.product4_url %>" title="" style="width: 6vw; min-width: 40px"></a>
+                            <a href="#"><img id="post_product_no_5" src="<%= @post.product5_url %>" title="" style="width: 6vw; min-width: 40px"></a>
                         </div>
 					</div>
 					<div class="m-stack__item m-stack__item--bottom m-stack__item--right" style="width: 20vw">

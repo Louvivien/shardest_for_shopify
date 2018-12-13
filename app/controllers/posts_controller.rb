@@ -20,6 +20,12 @@ class PostsController < ApplicationController
 
   # GET /posts/1/edit
   def edit
+    @shop = Shop.find_by(shopify_domain: params[:shop])
+    if @shop
+      @shop.with_shopify_session do
+      @products = ShopifyAPI::Product.find(:all)
+      end
+    end
     respond_to do |format|
       format.html
       format.js {}
@@ -27,6 +33,12 @@ class PostsController < ApplicationController
   end
 
   def tag_product
+    @shop = Shop.find_by(shopify_domain: params[:shop])
+    if @shop
+      @shop.with_shopify_session do
+      @products = ShopifyAPI::Product.find(:all)
+      end
+    end
     @post = Post.find(params[:post_id])
     @post.update(:product1_url => 'assets/app/media/img/users/user1.jpg' )
     respond_to do |format|
