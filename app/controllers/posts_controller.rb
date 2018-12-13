@@ -33,12 +33,6 @@ class PostsController < ApplicationController
   end
 
   def tag_product
-    @shop = Shop.find_by(shopify_domain: params[:shop])
-    if @shop
-      @shop.with_shopify_session do
-      @products = ShopifyAPI::Product.find(:all)
-      end
-    end
     puts @image = params[:images]
     puts @image = params[:images][0]
     @post = Post.find(params[:post_id])
