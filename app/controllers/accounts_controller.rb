@@ -12,6 +12,7 @@ class AccountsController < ApplicationController
 
   def show
     @user = session[:userinfo]
+    @posts = Post.all
   end
 
   def demo4

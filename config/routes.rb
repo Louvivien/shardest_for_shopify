@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :posts do 
+   post :tag_product
+  end
   #get 'accounts/home'
 
   mount ShopifyApp::Engine, at: '/'
@@ -9,8 +12,7 @@ Rails.application.routes.draw do
   get '/update' => 'accounts#update'
   get '/profile' => 'accounts#show'
   get '/demo' => 'accounts#demo4'
- 
-      
+  
     # GET /app_proxy/reviews will now be routed to
     # AppProxy::ReviewsController#index, for example
   

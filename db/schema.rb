@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_06_175645) do
+ActiveRecord::Schema.define(version: 2018_12_12_091109) do
+
+  create_table "posts", force: :cascade do |t|
+    t.string "image_url"
+    t.string "product1_url"
+    t.string "product2_url"
+    t.string "product3_url"
+    t.string "product4_url"
+    t.string "product5_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "shops", force: :cascade do |t|
     t.string "shopify_domain", null: false
