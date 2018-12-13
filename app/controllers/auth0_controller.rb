@@ -53,6 +53,8 @@ class Auth0Controller < ApplicationController
     puts @user[:picture]
     puts @user["picture"]
     puts @user.keys.count
+
+    @posts = Post.all
     # Redirect to the URL you want after successful auth
     #redirect_to dashboard_path(param1: @user}, shop: 'shop', path_prefix: "path_prefix", timestamp: "timestamp", signature: "signature")
 
