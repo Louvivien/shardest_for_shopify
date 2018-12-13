@@ -39,9 +39,10 @@ class PostsController < ApplicationController
       @products = ShopifyAPI::Product.find(:all)
       end
     end
-    @post = Post.find(params[:post_id])
     puts @image = params[:images]
     puts @image = params[:images][0]
+    @post = Post.find(params[:post_id])
+    
     @post.update(:product1_url => @image.src )
     respond_to do |format|
       format.html
@@ -100,6 +101,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:image_url, :product1_url, :images)
+      params.require(:post).permit(:image_url, :images)
     end
 end
