@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   mount ShopifyApp::Engine, at: '/'
   get '/auth/oauth2/callback' => 'auth0#callback'
   get '/auth/failure' => 'auth0#failure'
-  #root :to => 'app_proxy#index'
+  root :to => 'app_proxy#index'
   get '/dashboard' => 'accounts#home'
   get '/update' => 'accounts#update'
   get '/profile' => 'accounts#show'
