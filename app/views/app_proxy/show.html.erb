@@ -1,0 +1,136 @@
+<!-- begin::Body -->
+<body class="m-page--fluid m--skin- m-content--skin-light2 m-header--fixed m-header--fixed-mobile m-aside-left--enabled m-aside-left--skin-dark m-aside-left--fixed m-aside-left--offcanvas m-footer--push m-aside--offcanvas-default">
+
+	<!-- begin:: Page -->
+	<div class="m-grid m-grid--hor m-grid--root m-page">
+
+		<!--begin::Header-->
+
+		<%= render 'header' %>
+
+		<!--end::Header-->
+
+		<!-- begin::Body -->
+		<div class="m-grid__item m-grid__item--fluid m-grid m-grid--ver-desktop m-grid--desktop m-body">
+
+			<!--begin::Aside Menu-->
+		
+			<%= render 'aside_menu' %>
+
+			<!--end::Aside Menu-->
+
+			<div class="m-grid__item m-grid__item--fluid m-wrapper">
+
+				<!-- BEGIN: Subheader -->
+				<div class="m-subheader ">
+					<div class="d-flex align-items-center">
+						<div class="mr-auto">
+							<h3 class="m-subheader__title ">Profile</h3>
+						</div>
+					</div>
+				</div>
+
+				<!-- END: Subheader -->
+
+				<div class="m-content">
+					<div class="row">
+						<div class="col-lg-8 offset-md-2">
+							<div class="m-portlet m-portlet--rounded m-portlet--bordered-semi">
+					            <div class="m-portlet__body" style="padding: 0px;">
+					            	<div class="m-card-profile">
+										<div class="m-card-profile__pic">
+											<div class="m-card-profile__pic-wrapper">
+												<%= image_tag @user["extra"]["raw_info"]["picture"] %>
+											</div>
+										</div>
+										<div class="m-card-profile__details">
+											<div class="m-card-profile__name" style="margin-bottom: 5vh">
+												<%= @user["extra"]["raw_info"]["name"] %>
+											</div>
+											<div class="m-stack m-stack--ver m-stack--general">
+												<div class="m-stack__item m-stack__item--right">
+													23 years
+												</div>
+												<div class="m-stack__item">
+													Paris
+												</div>
+												<div class="m-stack__item m-stack__item--left">
+													Student
+												</div>
+											</div>
+										</div>
+									</div>
+					                <ul class="nav nav-tabs nav-fill m-tabs-line" role="tablist">
+					                    <li class="nav-item m-tabs__item">
+					                        <a class="nav-link m-tabs__link active" data-toggle="tab" href="#m_tabs_1_1">Lookboard</a>
+					                    </li>
+					                    <li class="nav-item m-tabs__item">
+					                        <a class="nav-link m-tabs__link" data-toggle="tab" href="#m_tabs_1_2">Outfits</a>
+					                    </li>
+					                </ul>                    
+					                      
+					            </div>
+					        </div>
+					        <div class="tab-content">
+			                    <div class="tab-pane active" id="m_tabs_1_1" role="tabpanel">
+			                        <div class="row">
+										<div class="col-xl-6">
+											<div class="m-portlet m-portlet--half-height m-portlet--rounded" style="background-image:url(https://scontent-cdt1-1.cdninstagram.com/vp/86a807e65e7ab1253c9ca811045723b3/5C989167/t51.2885-15/sh0.08/e35/p640x640/36585122_233175147512004_8037997501661315072_n.jpg); background-size:cover; min-height: 50vh" data-toggle="modal" data-target="#m_modal_1_2">	
+											</div>
+									  	</div> 
+									  	<div class="col-xl-6">
+									  		<div class="m-portlet m-portlet--half-height m-portlet--rounded" style="background-image:url(https://scontent-cdt1-1.cdninstagram.com/vp/33fdf1a9ddcfe70f71c63663c95f0998/5C904D2B/t51.2885-15/sh0.08/e35/s640x640/34034420_196824960944722_813963458700640256_n.jpg); background-size:cover; min-height: 50vh" data-toggle="modal" data-target="#m_modal_1_2">
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-xl-6">
+											<div class="m-portlet m-portlet--half-height m-portlet--rounded" style="background-image:url(https://scontent-cdt1-1.cdninstagram.com/vp/b3484f73fdd400e9d49480166e323d06/5CA1FDDE/t51.2885-15/sh0.08/e35/p640x640/44436549_265261251006612_8003046613753788036_n.jpg); background-size:cover; min-height: 50vh" data-toggle="modal" data-target="#m_modal_1_2">	
+											</div>
+									  	</div> 
+									</div>
+			                    </div>
+			                    <div class="tab-pane" id="m_tabs_1_2" role="tabpanel">
+			                        <div class="row">
+			                        	<% @posts.each do |post| %>
+										<div class="col-xl-6">
+											<div class="m-portlet m-portlet--half-height m-portlet--rounded" id="post_no_<%=post.id%>" style="background-image:url(<%= post.image_url %>); background-size:cover; min-height: 50vh" data-toggle="modal" data-target="#m_modal_1_2">	
+											</div>
+											<%= link_to 'Edit', edit_post_path(post), remote: true %>
+									  	</div>
+										<% end %>
+									</div>
+			                    </div>
+			                </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- end:: Body -->
+
+		<!--begin::Modal-->
+		
+		<%= render 'image_product_tag_modal' %>
+
+		<!--end::Modal-->
+
+		<!-- begin::Footer -->
+
+		<%= render 'footer' %>
+
+		<!-- end::Footer -->
+	</div>
+
+	<!-- end:: Page -->
+
+	<!-- begin::Scroll Top -->
+	<div id="m_scroll_top" class="m-scroll-top">
+		<i class="la la-arrow-up"></i>
+	</div>
+
+	<!-- end::Scroll Top -->
+</body>
+
+<!-- end::Body -->
