@@ -1,13 +1,5 @@
-if ($("#m_modal_1_2").isShown){
-    
-    $("#post_product_no_1").html("<%= j render 'product_url', post: @post %>"); 
-} else {
-
 $("#post_no_<%=@post.id%>").html("<%= j render 'edit_modal', post: @post %>");
 $("#m_modal_1_2").modal('show');
 
-};
 
-# la difficulté repose dnas le fait dutiliser le meme edit.js sinon on pourrait faire deux fichier en creeant une nouvelle methode dans le controller.
-# j ai fait un if modal displayed ajouter le product_url en attribut et le fetecher en ajax pour mettre a jour la modale. lattribut se met bien a jour mais ne maj pas la modal pour le moment
-# mais on a mons avis ca sera facile a regeler
+

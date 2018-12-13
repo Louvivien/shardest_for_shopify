@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: [:show, :edit, :update, :destroy, :tag_product]
+  before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   # GET /posts
   # GET /posts.json
@@ -19,6 +19,15 @@ class PostsController < ApplicationController
 
   # GET /posts/1/edit
   def edit
+    respond_to do |format|
+      format.html
+      format.js {}
+    end
+  end
+
+  def tag_product
+    @post = Post.find(params[:post_id])
+    @post.update(:product1_url => 'assets/app/media/img/users/user1.jpg' )
     respond_to do |format|
       format.html
       format.js {}
