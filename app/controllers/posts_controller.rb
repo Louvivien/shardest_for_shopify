@@ -40,8 +40,8 @@ class PostsController < ApplicationController
       end
     end
     @post = Post.find(params[:post_id])
-    puts @image = params[:image]
-    @post.update(:product1_url => @image[0].src )
+    #puts @image = params[:image]
+    @post.update(:product1_url => 'assets/app/media/img/users/user1.jpg' )
     respond_to do |format|
       format.html
       format.js {}
