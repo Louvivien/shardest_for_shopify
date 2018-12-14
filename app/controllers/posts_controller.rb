@@ -40,8 +40,9 @@ class PostsController < ApplicationController
     for key in @post.attributes.keys do |key|
       unless @post.attribute[key].present? do 
       @post.update(:product[key]_url => @image ) 
-      break
+      do_break = true
       end
+      break if do_break
     end
     respond_to do |format|
       format.html
