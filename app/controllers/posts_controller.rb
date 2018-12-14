@@ -40,8 +40,8 @@ class PostsController < ApplicationController
     puts @image = params[:image]
 
       @post.attributes.keys.each do |key|
-          unless @post.attribute[key].present? do 
-          @post.update(':product'+key+'_url' => @image ) 
+          unless @post.attributes[key].present? do 
+          @post.update(:key => @image ) 
           do_break = true
           end
         if do_break
