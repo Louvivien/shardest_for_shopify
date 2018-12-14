@@ -36,7 +36,7 @@ class PostsController < ApplicationController
     puts params
  
     puts @post = Post.find(params[:post_id])
-    puts @image = 'assets/app/media/img/users/user1.jpg'
+    puts @image = params[:image]
     @post.update(:product1_url => @image )
     respond_to do |format|
       format.html
