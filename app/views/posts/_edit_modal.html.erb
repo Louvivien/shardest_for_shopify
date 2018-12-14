@@ -91,7 +91,7 @@
 										<% end %>
 										<span class="m-list-search__result-item-text"> <%= product.title %> </span>
 									</a>
-									<%= link_to 'Tag this product', tag_product_url(@post, :image => product.images[0].src ) , method: :post, remote: true %>
+									<%= link_to 'Tag this product', tag_product_url(@post, :image => "#{product.images[0].src}" ) , method: :post, remote: true %>
 									<% end %>
 								</div>
 							</div>
