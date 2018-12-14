@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :posts do 
-   #post ':tag_product'
+   post :tag_product
   end
   #get 'accounts/home'
 
@@ -13,10 +13,8 @@ Rails.application.routes.draw do
   get '/profile' => 'accounts#show'
   get '/demo' => 'accounts#demo4'
   
- 
-  post '*/posts/:id/tag_product', to: 'posts#tag_product', as: 'tag_product'
 
-
+  
     # GET /app_proxy/reviews will now be routed to
     # AppProxy::ReviewsController#index, for example
   
