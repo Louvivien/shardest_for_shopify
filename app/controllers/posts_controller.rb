@@ -41,12 +41,11 @@ class PostsController < ApplicationController
 
       @post.attributes.keys.each do |key|
           unless @post.attributes[key].present? do 
-          @post.update(:key => @image ) 
+          @post.update(:key => @image )
           do_break = true
+          break 
           end
-        if do_break
-          break
-        end
+          break if do_break
       end
     respond_to do |format|
       format.html
