@@ -41,7 +41,7 @@ class PostsController < ApplicationController
 
       @post.attributes.keys.each do |key|
           unless @post.attributes[key].present? 
-          @post.update(:key => @image )
+          @post.update(':'+key => @image )
           do_break = true
           end
           break if do_break
