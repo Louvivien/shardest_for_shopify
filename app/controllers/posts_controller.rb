@@ -37,7 +37,12 @@ class PostsController < ApplicationController
  
     puts @post = Post.find(params[:post_id])
     puts @image = params[:image]
-    @post.update(:product1_url => @image )
+    for key in @post.attributes.keys do |key|
+      unless @post.attribute[key].present? do 
+      @post.update(:product[key]_url => @image ) 
+      break
+      end
+    end
     respond_to do |format|
       format.html
       format.js {}
