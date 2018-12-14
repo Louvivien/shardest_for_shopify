@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   get '/demo' => 'accounts#demo4'
   
  
-  post '/posts/:id/tag_product', to: 'posts#tag_product', constraints: { host: 'shardest.com/a/account'}, as: 'tag_product'
+  post '*/posts/:id/tag_product', to: 'posts#tag_product', as: 'tag_product'
 
 
     # GET /app_proxy/reviews will now be routed to
