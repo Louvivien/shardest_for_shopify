@@ -59,10 +59,9 @@ class PostsController < ApplicationController
   def publish
     @post = Post.find(params[:post_id])
     @post.update(post_params)
-    # respond_to do |format|
-    #   format.html
-    #   format.js {}
-    # end
+    respond_to do |format|
+      format.js {}
+    end
   end
 
   # POST /posts
