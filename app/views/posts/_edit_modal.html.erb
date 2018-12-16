@@ -103,7 +103,10 @@
 				<div class="m-stack m-stack--ver m-stack--general">
 					<div class="m-stack__item m-stack__item--left">
 						<div class="m-list-pics m-list-pics--rounded">
-                            <a href="#"><img id="product1_url_tagged" src="<%= @post.product1_url %>" title="" style="width: 6vw; min-width: 40px"></a>
+						<ul>
+							<li><a href="#"><img id="product1_url_tagged" src="<%= @post.product1_url %>" title="" style="width: 6vw; min-width: 40px"></a></li>
+							<%= link_to 'Untag this product', "/a/account/posts/#{@post.id}/", method: :patch, remote: true, data-params: @post.product1_url=nil %>
+						</ul>
                             <a href="#"><img id="product2_url_tagged" src="<%= @post.product2_url %>" title="" style="width: 6vw; min-width: 40px"></a>
                             <a href="#"><img id="product3_url_tagged" src="<%= @post.product3_url %>" title="" style="width: 6vw; min-width: 40px"></a>
                             <a href="#"><img id="product4_url_tagged" src="<%= @post.product4_url %>" title="" style="width: 6vw; min-width: 40px"></a>

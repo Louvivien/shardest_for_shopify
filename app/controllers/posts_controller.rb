@@ -76,9 +76,11 @@ class PostsController < ApplicationController
       if @post.update(post_params)
         format.html { redirect_to @post, notice: 'Post was successfully updated.' }
         format.json { render :show, status: :ok, location: @post }
+        format.js
       else
         format.html { render :edit }
         format.json { render json: @post.errors, status: :unprocessable_entity }
+        format.js
       end
     end
   end
@@ -102,8 +104,8 @@ class PostsController < ApplicationController
       @post = Post.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    # def post_params
-    #   params.require(:post).permit(:image_url, :image, :product1_url)
-    # end
+    Never trust parameters from the scary internet, only allow the white list through.
+    def post_params
+      params.permit(:image_url, :image, :product1_url)
+    end
 end
