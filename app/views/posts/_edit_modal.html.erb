@@ -78,26 +78,26 @@
 						<!--Space-->
 					</div>
 					<div class="m-stack__item">
-						<div style="overflow-y: scroll; height:400px;">
 							<div class="m-list-search">
 								<div class="m-list-search__results">
 									<div class="m-list-search__results">
 										<span class="m-list-search__result-category">
 											Products
 										</span>
-										<% @products.each do |product| %>
-										<a href="#" class="m-list-search__result-item">
-											<% product.images.each do |image| %>
-											<span class="m-list-search__result-item-pic"><img class="m--img-rounded" src="<%= image.src %>" title=""></span>
+										<div style="overflow-y: scroll; height:350px;">
+											<% @products.each do |product| %>
+											<a href="#" class="m-list-search__result-item">
+												<% product.images.each do |image| %>
+												<span class="m-list-search__result-item-pic"><img class="m--img-rounded" src="<%= image.src %>" title=""></span>
+												<% end %>
+												<span class="m-list-search__result-item-text"> <%= product.title %> </span>
+											</a>
+											<%= link_to 'Tag this product', "/a/account/posts/#{post.id}/tag_product?" + {:image => "#{product.images[0].src}"}.to_param, method: :post, remote: true %>
 											<% end %>
-											<span class="m-list-search__result-item-text"> <%= product.title %> </span>
-										</a>
-										<%= link_to 'Tag this product', "/a/account/posts/#{post.id}/tag_product?" + {:image => "#{product.images[0].src}"}.to_param, method: :post, remote: true %>
-										<% end %>
+										</div>
 									</div>
 								</div>
 							</div>
-						</div>
 					</div>
 				</div>
 			</div>
