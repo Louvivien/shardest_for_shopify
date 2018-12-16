@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   include ShopifyApp::AppProxyVerification
-  before_action :set_post, only: [:show, :edit, :update, :destroy]
+  #before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   # GET /posts
   # GET /posts.json
@@ -20,6 +20,7 @@ class PostsController < ApplicationController
 
   # GET /posts/1/edit
   def edit
+    @post = Post.find(params[:id])
     @shop = Shop.find_by(shopify_domain: params[:shop])
     if @shop
       @shop.with_shopify_session do
@@ -34,7 +35,7 @@ class PostsController < ApplicationController
 
   def tag_product
     puts params
- 
+    @post = Post.find(params[:id])
     puts @post = Post.find(params[:post_id])
 
     puts @image = params[:image]
