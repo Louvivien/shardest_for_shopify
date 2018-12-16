@@ -104,7 +104,7 @@ class PostsController < ApplicationController
       @post = Post.find(params[:id])
     end
 
-    Never trust parameters from the scary internet, only allow the white list through.
+    #Never trust parameters from the scary internet, only allow the white list through.
     def post_params
       params.permit(:image_url, :image, :product1_url)
     end
