@@ -58,11 +58,11 @@ class PostsController < ApplicationController
 
   def publish
     @post = Post.find(params[:post_id]
-    @post.update_attribute = (:published, true)
-    respond_to do |format|
-      format.html
-      format.js {}
-    end
+    @post.update_attribute = (post_params)
+    # respond_to do |format|
+    #   format.html
+    #   format.js {}
+    # end
   end
 
   # POST /posts
