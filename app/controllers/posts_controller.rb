@@ -75,7 +75,7 @@ class PostsController < ApplicationController
   # PATCH/PUT /posts/1.json
   def update
     puts post_params
-    puts @key = post_params.keys
+    puts @key = post_params.keys[0]
     @post = Post.find(params[:id])
     puts @key.class
     respond_to do |format|
