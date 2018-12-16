@@ -74,6 +74,7 @@ class PostsController < ApplicationController
   def update
     puts post_params
     puts @key = post_params.keys
+    @post = Post.find(params[:id])
     respond_to do |format|
       if @post.update(post_params)
         format.html { redirect_to @post, notice: 'Post was successfully updated.' }
