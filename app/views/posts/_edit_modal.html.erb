@@ -105,7 +105,7 @@
 						<div class="m-list-pics m-list-pics--rounded">
 						<ul>
 							<li><a href="#"><img id="product1_url_tagged" src="<%= @post.product1_url %>" title="" style="width: 6vw; min-width: 40px"></a></li>
-							<%= link_to 'Untag this product', "/a/account/posts/#{@post.id}/", method: :patch, remote: true, data-params=> @post.product1_url=nil %>
+							<%= link_to 'Untag this product', "/a/account/posts/#{@post.id}/", data: {method: :patch, remote: true, params: {product1_url: nil}.to_param} %>
 						</ul>
                             <a href="#"><img id="product2_url_tagged" src="<%= @post.product2_url %>" title="" style="width: 6vw; min-width: 40px"></a>
                             <a href="#"><img id="product3_url_tagged" src="<%= @post.product3_url %>" title="" style="width: 6vw; min-width: 40px"></a>
