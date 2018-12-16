@@ -47,6 +47,8 @@ class PostsController < ApplicationController
           end
           break if do_break
       end
+
+    puts @key.class
     respond_to do |format|
       format.html
       format.js {}
@@ -75,6 +77,7 @@ class PostsController < ApplicationController
     puts post_params
     puts @key = post_params.keys
     @post = Post.find(params[:id])
+    puts @key.class
     respond_to do |format|
       if @post.update(post_params)
         format.html { redirect_to @post, notice: 'Post was successfully updated.' }
