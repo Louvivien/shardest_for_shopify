@@ -58,7 +58,7 @@ class PostsController < ApplicationController
 
   def publish
     @post = Post.find(params[:post_id]
-    @post.update_attribute = (published: true)
+    @post.update_attribute = (:published, true)
     respond_to do |format|
       format.html
       format.js {}
