@@ -73,7 +73,7 @@ class PostsController < ApplicationController
   # PATCH/PUT /posts/1.json
   def update
     puts post_params
-    puts post_params.keys
+    puts @key = post_params.keys
     respond_to do |format|
       if @post.update(post_params)
         format.html { redirect_to @post, notice: 'Post was successfully updated.' }
