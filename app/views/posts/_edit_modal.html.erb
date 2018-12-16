@@ -103,26 +103,26 @@
 				<div class="m-stack m-stack--ver m-stack--general">
 					<div class="m-stack__item m-stack__item--left">
 						<div class="m-list-pics m-list-pics--rounded">
-						<span>
+						
 							<a href="#"><img id="product1_url_tagged" src="<%= @post.product1_url %>" title="" style="width: 6vw; min-width: 40px"></a>
 							<%= link_to 'Untag this product', "/a/account/posts/#{@post.id}/", data: {method: :patch, remote: true, params: {product1_url: nil}.to_param} %>
-						</span>
-						<span>
+						
+						
 							<a href="#"><img id="product2_url_tagged" src="<%= @post.product2_url %>" title="" style="width: 6vw; min-width: 40px"></a>
 							<%= link_to 'Untag this product', "/a/account/posts/#{@post.id}/", data: {method: :patch, remote: true, params: {product2_url: nil}.to_param} %>
-						</span>
-						<span>
+						
+						
 							<a href="#"><img id="product3_url_tagged" src="<%= @post.product3_url %>" title="" style="width: 6vw; min-width: 40px"></a>
 							<%= link_to 'Untag this product', "/a/account/posts/#{@post.id}/", data: {method: :patch, remote: true, params: {product3_url: nil}.to_param} %>
-						</span>
-						<span>
+						
+						
 							<a href="#"><img id="product4_url_tagged" src="<%= @post.product4_url %>" title="" style="width: 6vw; min-width: 40px"></a>
 							<%= link_to 'Untag this product', "/a/account/posts/#{@post.id}/", data: {method: :patch, remote: true, params: {product4_url: nil}.to_param} %>
-						</span>
-						<span>
+						
+						
 							<a href="#"><img id="product5_url_tagged" src="<%= @post.product5_url %>" title="" style="width: 6vw; min-width: 40px"></a>
 							<%= link_to 'Untag this product', "/a/account/posts/#{@post.id}/", data: {method: :patch, remote: true, params: {product5_url: nil}.to_param} %>
-						</span>
+						
                         </div>
 					</div>
 					<div class="m-stack__item m-stack__item--bottom m-stack__item--right" style="width: 20vw">
