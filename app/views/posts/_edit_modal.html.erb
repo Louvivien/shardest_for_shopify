@@ -121,7 +121,7 @@
                         </div>
 					</div>
 					<div class="m-stack__item m-stack__item--bottom m-stack__item--right" style="width: 20vw">
-						<button type="button" class="btn btn-lg btn-primary"><%= link_to 'Share', "/a/account/posts/#{post.id}/publish", data: {method: :patch, remote: true, params: {published: true}.to_param} %> </button>
+						<%= link_to 'Share', "/a/account/posts/#{post.id}/publish", data: {method: :patch, remote: true, params: {published: true}.to_param} %>
 					</div>
 				</div>
 			</div>
