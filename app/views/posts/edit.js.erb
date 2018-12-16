@@ -1,4 +1,4 @@
-$("#post_no_<%=@post.id%>").html("<%= j render 'edit_modal', post: @post %>");
+$("#post_no_<%=@post.id%>").html("<%= j render 'edit_modal', :locals => {:post => @post} %>");
 $("#m_modal_1_2").modal('show');
 
 
