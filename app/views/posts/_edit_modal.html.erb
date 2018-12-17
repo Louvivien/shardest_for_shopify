@@ -110,7 +110,7 @@
 									<% 1.upto(5) do |i|%>
 										
 										<div class="col-md-2 col-md-offset-1"><a href="#"><img id="product#{i}_url_tagged" src="<%= post.product#{i}_url %>" title="" style="width: 40px; min-width: 40px"></a><br>
-										<%= link_to 'Untag  product', "/a/account/posts/#{post.id}/untag", data: {method: :patch, remote: true, params: {"product#{i}_url": nil}.to_param} %><br>
+										<%= link_to 'Untag  product', "/a/account/posts/#{post.id}/untag", data: {method: :patch, remote: true, params: {'product'+i+'_url': nil}.to_param} %><br>
 										</div>
 
 									<%end%>
