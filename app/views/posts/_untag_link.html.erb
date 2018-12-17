@@ -1,2 +1,2 @@
-<% key_param = { key: nil} %>
+<% key_param = { "#{key}": nil} %>
 <%= link_to 'Untag  product', "/a/account/posts/#{post.id}/untag", data: {method: :patch, remote: true, params: key_param.to_param}, id: "link_to_untag_#{key}" %>
