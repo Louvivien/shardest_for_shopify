@@ -1,3 +1,3 @@
     $("#<%= @key+"_tagged"%>").replaceWith("<%= j render 'product_url', post: @post %>"); 
-  
+    $("#<%= "link_to_untag_"+@key%>").replaceWith("<%= link_to 'Untag  product', "/a/account/posts/#{@post.id}/untag", data: {method: :patch, remote: true, params: {@key: nil}.to_param}, id: "link_to_untag_+@key" %>").show(); 
  
