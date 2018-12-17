@@ -1,3 +1,4 @@
     $("#<%= @key+"_tagged"%>").replaceWith("<%= j render 'product_url', post: @post %>"); 
-    $("#<%= "link_to_untag_"+@key%>").replaceWith(" <%= j link_to 'Untag  product', "/a/account/posts/#{@post.id}/untag", data: {method: :patch, remote: true, params: {@key: nil}.to_param}, id: "link_to_untag_+@key" %>").show(); 
- 
+    $("#<%= "link_to_untag_"+@key%>").replaceWith("<%= j render 'untag_link', post: @post, key: @key %>");
+    $("#<%= "link_to_untag_"+@key%>").show(); 
+############# faire une partial et foutre le rails dedans #######
