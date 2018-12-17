@@ -111,7 +111,7 @@
 										<% product_url_tagged = "product#{i}_url_tagged" %>
 										<% post_product_url_tagged = [post.product1_url,post.product2_url,post.product3_url,post.product4_url,post.product5_url] %>
 										<div class="col-md-2 col-md-offset-1"><a href="#"><img id="<%= product_url_tagged %>" src="<%= post_product_url_tagged[i-1]  %>" title="" style="width: 40px; min-width: 40px"></a><br>
-										<%= link_to 'Untag  product', "/a/account/posts/#{post.id}/untag", data: {method: :patch, remote: true, params: {post_product_url_tagged[i-1]: nil}.to_param} %><br>
+										<%= link_to 'Untag  product', "/a/account/posts/#{post.id}/untag", data: {method: :patch, remote: true, params: {"product{i}_url": nil}.to_param} %><br>
 										</div>
 
 
