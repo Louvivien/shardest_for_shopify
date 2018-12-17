@@ -108,8 +108,9 @@
 							<div class="container-fluid">
 								<div class="row">
 									<% 1.upto(5) do |i|%>
-										
-										<div class="col-md-2 col-md-offset-1"><a href="#"><img id="<%= 'product'+i'_url_tagged'%>" src="<%= post.product#{i}_url %>" title="" style="width: 40px; min-width: 40px"></a><br>
+										<% product_url_tagged = "product#{i}_url_tagged" %>
+										<% post_product_url_tagged = "post.product#{i}_url" %>
+										<div class="col-md-2 col-md-offset-1"><a href="#"><img id="<%= product_url_tagged %>" src="<%= post_product_url_tagged  %>" title="" style="width: 40px; min-width: 40px"></a><br>
 										<%= link_to 'Untag  product', "/a/account/posts/#{post.id}/untag", data: {method: :patch, remote: true, params: {product1_url: nil}.to_param} %><br>
 										</div>
 
