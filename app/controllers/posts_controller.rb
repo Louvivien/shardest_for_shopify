@@ -56,7 +56,24 @@ class PostsController < ApplicationController
     end
   end
 
+  def untag
+    @post = Post.find(params[:post_id])
+    @post.update(post_params)
+    @key = post_params.keys[0]
+    respond_to do |format|
+      format.js {}
+    end
+  end
+
   def publish
+    @post = Post.find(params[:post_id])
+    @post.update(post_params)
+    respond_to do |format|
+      format.js {}
+    end
+  end
+
+  def unpublish
     @post = Post.find(params[:post_id])
     @post.update(post_params)
     respond_to do |format|
@@ -83,22 +100,18 @@ class PostsController < ApplicationController
   # PATCH/PUT /posts/1
   # PATCH/PUT /posts/1.json
   def update
-    puts post_params
-    puts @key = post_params.keys[0]
     @post = Post.find(params[:id])
-    puts @key.class
     respond_to do |format|
       if @post.update(post_params)
         format.html { redirect_to @post, notice: 'Post was successfully updated.' }
         format.json { render :show, status: :ok, location: @post }
-        format.js
       else
         format.html { render :edit }
         format.json { render json: @post.errors, status: :unprocessable_entity }
-        format.js
       end
     end
   end
+
 
 
 

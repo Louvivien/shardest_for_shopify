@@ -112,11 +112,11 @@
 							<a href="#"><img id="product4_url_tagged" src="<%= post.product4_url %>" title="" style="width: 6vw; min-width: 40px"></a><br>
 							<a href="#"><img id="product5_url_tagged" src="<%= post.product5_url %>" title="" style="width: 6vw; min-width: 40px"></a><br>
 							<br>
-							<%= link_to 'Untag  product 1', "/a/account/posts/#{post.id}/", data: {method: :patch, remote: true, params: {product1_url: nil}.to_param} %><br>
-							<%= link_to 'Untag  product 2', "/a/account/posts/#{post.id}/", data: {method: :patch, remote: true, params: {product2_url: nil}.to_param} %><br>
-							<%= link_to 'Untag  product 3', "/a/account/posts/#{post.id}/", data: {method: :patch, remote: true, params: {product3_url: nil}.to_param} %><br>
-							<%= link_to 'Untag  product 4', "/a/account/posts/#{post.id}/", data: {method: :patch, remote: true, params: {product4_url: nil}.to_param} %><br>
-							<%= link_to 'Untag  product 5', "/a/account/posts/#{post.id}/", data: {method: :patch, remote: true, params: {product5_url: nil}.to_param} %><br>
+							<%= link_to 'Untag  product 1', "/a/account/posts/#{post.id}/untag", data: {method: :patch, remote: true, params: {product1_url: nil}.to_param} %><br>
+							<%= link_to 'Untag  product 2', "/a/account/posts/#{post.id}/untag", data: {method: :patch, remote: true, params: {product2_url: nil}.to_param} %><br>
+							<%= link_to 'Untag  product 3', "/a/account/posts/#{post.id}/untag", data: {method: :patch, remote: true, params: {product3_url: nil}.to_param} %><br>
+							<%= link_to 'Untag  product 4', "/a/account/posts/#{post.id}/untag", data: {method: :patch, remote: true, params: {product4_url: nil}.to_param} %><br>
+							<%= link_to 'Untag  product 5', "/a/account/posts/#{post.id}/untag", data: {method: :patch, remote: true, params: {product5_url: nil}.to_param} %><br>
 						
                         </div>
 					</div>

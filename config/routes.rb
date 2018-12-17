@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   resources :posts do 
    post :tag_product
+   patch :untag
    patch :publish
+   patch :unpublish
   end
   #get 'accounts/home'
 
