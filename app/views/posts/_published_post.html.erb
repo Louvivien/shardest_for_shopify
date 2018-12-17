@@ -1,4 +1,5 @@
 <div class="col-xl-6">
     <div class="m-portlet m-portlet--half-height m-portlet--rounded" id="post_no_<%=post.id%>" style="background-image:url(<%= post.image_url %>); background-size:cover; min-height: 50vh" data-toggle="modal" data-target="#m_modal_1_2"></div>
 </div><br>
+<br>
 <%= link_to 'Unpublish', "/a/account/posts/#{post.id}/unpublish", data: {method: :patch, remote: true, params: {published: false}.to_param} %>
